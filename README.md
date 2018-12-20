@@ -140,9 +140,11 @@ public class ForegroundService extends Service {
 ```
 <br>
 加入权限
+
 ```html
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 ```
+
 
 <br>
 最后在MainActivity启动服务就行:↓
