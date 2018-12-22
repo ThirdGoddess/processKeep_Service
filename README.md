@@ -11,7 +11,7 @@
 </ol>
 
 下面进行解释：<br><br><br>
-<h5><font color="red">前台进程(Foreground process):</font></h5>
+<h3><font color="red">前台进程(Foreground process):</font></h3>
 用户当前操作所必需的进程。如果一个进程满足以下任一条件，即视为前台进程：
 
 <ul>
@@ -32,16 +32,16 @@
 
 可见进程被视为是极其重要的进程，除非为了维持所有前台进程同时运行而必须终止，否则系统不会终止这些进程。<br><br><br>
 
-<h5><font color="red">服务进程 (Service process):</font></h5>
+<h3><font color="red">服务进程 (Service process):</font></h3>
 正在运行已使用 startService() 方法启动的服务且不属于上述两个更高类别进程的进程。尽管服务进程与用户所见内容没有直接关联，但是它们通常在执行一些用户关心的操作（例如，在后台播放音乐或从网络下载数据）。因此，除非内存不足以维持所有前台进程和可见进程同时运行，否则系统会让服务进程保持运行状态。<br><br><br>
 
-<h5><font color="red">后台进程 (Service process):</font></h5>
+<h3><font color="red">后台进程 (Service process):</font></h3>
 包含目前对用户不可见的 Activity 的进程（已调用 Activity 的 onStop() 方法）。这些进程对用户体验没有直接影响，系统可能随时终止它们，以回收内存供前台进程、可见进程或服务进程使用。 通常会有很多后台进程在运行，因此它们会保存在 LRU （最近最少使用）列表中，以确保包含用户最近查看的 Activity 的进程最后一个被终止。如果某个 Activity 正确实现了生命周期方法，并保存了其当前状态，则终止其进程不会对用户体验产生明显影响，因为当用户导航回该 Activity 时，Activity 会恢复其所有可见状态。<br><br><br>
 
-<h5><font color="red">空进程 (Empty process):</font></h5>
+<h3><font color="red">空进程 (Empty process):</font></h3>
 不含任何活动应用组件的进程。保留这种进程的的唯一目的是用作缓存，以缩短下次在其中运行组件所需的启动时间。 为使总体系统资源在进程缓存和底层内核缓存之间保持平衡，系统往往会终止这些进程。<br><br><br>
 
-<h5><font color="red">进程优先级:</font></h5>
+<h3><font color="red">进程优先级:</font></h3>
 首先空进程是最先被回收的，其次便是后台进程，依次往上，前台进程是最后才会被结束。<br><br><br>
 
 <h2>Android进程保活</h2>
