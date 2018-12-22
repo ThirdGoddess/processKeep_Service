@@ -60,7 +60,7 @@
 	<li><font color="red">设置前台Service，提升App进程优先级</font></li>
 </ul>
 
-<h5><font color="red">设置前台Service，提升App进程优先级:</font></h5>
+<h3><font color="red">设置前台Service，提升App进程优先级:</font></h3>
 
 <br>首先创建ForegroundService.java继承自Service(android.app.Service):↓
 
